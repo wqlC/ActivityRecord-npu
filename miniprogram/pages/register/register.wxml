@@ -1,0 +1,8 @@
+<!--miniprogram/pages/register/register.wxml-->
+<view class="container">
+  <form bindsubmit="register">
+    <input name='name' type="text" placeholder="姓名"></input>
+    <input name='stuId' type="text" placeholder="学号"></input>
+    <button form-type="submit" type="primary">提交</button>
+  </form>
+</view>

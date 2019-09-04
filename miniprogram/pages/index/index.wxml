@@ -1,0 +1,44 @@
+<!--miniprogram/pages/index/index.html.wxml-->
+<view class="page">
+
+  <view class="page__bd">
+    <view class="weui-grids">
+      <view class="weui-grid" hover-class="weui-grid_active" mark:id="1" mark:name="吃饭" bindtap="clickTap" hover-stay-time="60" hover-start-time="10">
+        <image class="weui-grid__icon" src="/images/computer.png"></image>
+        <view class="weui-grid__label">吃饭</view>
+      </view>
+      <view class="weui-grid" hover-class="weui-grid_active" mark:id="2" mark:name="运动" bindtap="clickTap" hover-stay-time="60" hover-start-time="10">
+        <image class="weui-grid__icon" src="/images/document.png"></image>
+        <view class="weui-grid__label">运动</view>
+      </view>
+      <view class="weui-grid" hover-class="weui-grid_active" mark:id="3" mark:name="睡觉" bindtap="clickTap" hover-stay-time="60" hover-start-time="10">
+        <image class="weui-grid__icon" src="/images/email.png"></image>
+        <view class="weui-grid__label">睡觉</view>
+      </view>
+      <view class="weui-grid" hover-class="weui-grid_active" mark:id="4" mark:name="科研" bindtap="clickTap" hover-stay-time="200" hover-start-time="50">
+        <image class="weui-grid__icon" src="/images/heart.png"></image>
+        <view class="weui-grid__label">科研</view>
+      </view>
+      <view class="weui-grid" hover-class="weui-grid_active" mark:id="5" mark:name="洗漱" bindtap="clickTap" hover-stay-time="60" hover-start-time="10">
+        <image class="weui-grid__icon" src="/images/list.png"></image>
+        <view class="weui-grid__label">洗漱</view>
+      </view>
+      <view class="weui-grid" hover-class="weui-grid_active" mark:id="6" mark:name="会议" bindtap="clickTap" hover-stay-time="60" hover-start-time="10">
+        <image class="weui-grid__icon" src="/images/microphone.png"></image>
+        <view class="weui-grid__label">会议</view>
+      </view>
+      <view class="weui-grid" hover-class="weui-grid_active" mark:id="7" mark:name="卫生间" bindtap="clickTap" hover-stay-time="60" hover-start-time="10">
+        <image class="weui-grid__icon" src="/images/picture.png"></image>
+        <view class="weui-grid__label">卫生间</view>
+      </view>
+      <view class="weui-grid" hover-class="weui-grid_active" mark:id="8" mark:name="购物" bindtap="clickTap" hover-stay-time="60" hover-start-time="10">
+        <image class="weui-grid__icon" src="/images/smartphone.png"></image>
+        <view class="weui-grid__label">购物</view>
+      </view>
+      <view class="weui-grid" hover-class="weui-grid_active" mark:id="9" mark:name="休闲" bindtap="clickTap" hover-stay-time="60" hover-start-time="10">
+        <image class="weui-grid__icon" src="/images/speech-bubble.png"></image>
+        <view class="weui-grid__label">休闲</view>
+      </view>
+    </view>
+  </view>
+</view>
