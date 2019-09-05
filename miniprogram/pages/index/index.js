@@ -57,7 +57,7 @@ Page({
           
         } else {
           console.log('用户不存在，请先注册')
-          wx.navigateTo({
+          wx.redirectTo({
             url: '../register/register',
           });
         }

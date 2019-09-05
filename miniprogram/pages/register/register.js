@@ -60,7 +60,7 @@ Page({
       console.log("app.globalData.score", app.globalData.score);
       console.log("app.globalData.name", app.globalData.name);
       
-      wx.navigateBack({
+      wx.redirectTo({
         url: '../index/index',
       });
       wx.hideLoading();
