@@ -59,18 +59,52 @@ Page({
       console.log("app.globalData.stuId", app.globalData.stuId);
       console.log("app.globalData.score", app.globalData.score);
       console.log("app.globalData.name", app.globalData.name);
-      
-      wx.redirectTo({
-        url: '../index/index',
-      });
-      wx.hideLoading();
+
+      this.createCollection(app.globalData.stuId);
+
     }).catch(err => {//调用云函数失败
       console.log('调用失败--register', err);
       wx.hideLoading();
     });
 
   },
+  
+  /**
+   * 创建学号对应数据库
+   */
+  createCollection(stuId) {
 
+    //调用云函数--createCollection
+    wx.cloud.callFunction({
+      name: 'createCollection',
+      data: {
+        stuId: stuId
+      }
+    }).then(res => {//res is returned from cloud
+      console.log('调用成功 and res is:', res);
+      const result = res.result;
+      const data = result.data || {}; //data为空
+
+      if (result.code) {//code 非0, 表明出现错误
+        console.log('something wrong');
+        wx.showToast({
+          title: result.msg,
+          icon: 'none'
+        });
+        return;
+      }
+      //跳转到首页
+      wx.reLaunch({
+        url: '../index/index',
+      });
+      console.log('调用成功--返回到主页面');
+      wx.hideLoading();
+    }).catch(err => {//调用云函数失败
+      console.log('调用失败--createCollection', err);
+      wx.hideLoading();
+    });
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */

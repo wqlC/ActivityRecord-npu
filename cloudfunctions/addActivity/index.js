@@ -1,6 +1,5 @@
 // 云函数入口文件
 const cloud = require('wx-server-sdk')
-
 cloud.init()
 
 // 云函数入口函数
@@ -17,24 +16,8 @@ exports.main = async (event, context) => {
   console.log("activity: ", activity);
   console.log("timestamp: ", timestamp);
   let result = null;
-
-  // try {
-  //   //引用数据库
-  //   const db = cloud.database();
-  //   const collection = db.collection(stuId);
-  //   result = await collection.add({
-  //     data: {
-  //       id,
-  //       activity,
-  //       timestamp,
-  //     }
-  //   });
-  // } catch (e) {
-  //   return {
-  //     code: 1,
-  //     msg: e.message
-  //   };
-  // };
+  let resultAdd = null;
+  
 
   //往 user 里面添加活动记录
   try {
@@ -47,17 +30,17 @@ exports.main = async (event, context) => {
       }
     ).update({
       data: {
-        data: db.command.push([{id, activity, timestamp}])
+        data: db.command.push([{id, activity, timestamp}]),
       }
     });
-    result = await collection.where(
-      {
-        stuId: stuId
-      }
-    ).update({
-      data: {
-        score: db.command.inc(1)
-      }
+
+    //向学号表中添加对应记录
+    result = await db.collection(stuId).add({
+        data:{
+          id: id,
+          activity: activity,
+          timestamp: timestamp
+        }
     });
   } catch (e) {
     return {
@@ -68,8 +51,6 @@ exports.main = async (event, context) => {
 
   return {
     code: 0,
-    data: {
-      text: "add activity"
-    }
+    data: result
   };
 }

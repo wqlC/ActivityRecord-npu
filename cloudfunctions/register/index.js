@@ -53,6 +53,4 @@ exports.main = async (event, context) => {
       stdId: event.stdId
     }
   };
-
-
 }

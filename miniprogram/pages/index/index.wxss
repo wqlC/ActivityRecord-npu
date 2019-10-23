@@ -1,1 +1,33 @@
 /* miniprogram/pages/index/index.html.wxss */
+/* pages/owner/owner.wxss */
+
+.clickimage {  
+  overflow:hidden;   
+  display: inline-block;
+  margin-bottom: 0rpx;  
+  margin-top: 10rpx;  
+  height: 10vh;
+  width: 10vh;
+  border-radius:30%; 
+  border: 2px solid #fff;  
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);  
+}  
+
+.section{
+  height: 10vh;
+  margin-bottom: 3vh;
+}
+
+.flex-wrp {display: flex;}
+
+.bc-num{
+  font-size: 13pt;
+  margin-left:15vw;
+}
+.rule{
+  margin-bottom:1vh;
+  /* margin-left: 20vw; */
+  float: right;
+}
+
+  
