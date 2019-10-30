@@ -1,0 +1,20 @@
+<!--miniprogram/pages/detail/detail.wxml-->
+<view class="container">
+  <view class="activity">
+    <view>活动id: {{detail.id}}</view>
+    <view>活动名称: {{detail.activity}}</view>
+    <picker mode="date" value="{{date}}" start="2019-10-25" end="2020-01-01" bindchange="bindDateChange">
+      <view class="picker">
+        记录日期: {{date}}
+      </view>
+    </picker>
+    <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+      <view class="picker">
+        记录时间: {{time}}
+      </view>
+    </picker>
+  </view>
+  <view class="button-items">
+    <button class="mini-btn" type="primary" role="button" aria-disabled="false">删除记录</button>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<!--miniprogram/pages/list/list.wxml-->
+   <!-- bindtap="getDetail" -->
+<view class="container">
+  <view class="idcard-item" wx:for="{{list}}" wx:key="*this" 
+  mark:item="{{item}}"
+   >
+    <view class="idcard-detail">
+      <view class="id_">id: {{item.id}}</view>
+      <view>
+        <view class="title">活动名称: {{item.activity}}</view>
+        <view class="content">记录日期: {{item.date}}</view>
+        <view class="content">记录时间: {{item.timestamp}}</view>
+      </view>
+    </view>
+  </view>
+</view>

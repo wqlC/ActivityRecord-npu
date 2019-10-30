@@ -1,0 +1,22 @@
+/* miniprogram/pages/detail/detail.wxss */
+.container{
+  width: 100vw;
+  border-top: 2rpx solid #D8D8D8
+}
+
+.button-items {
+  display: flex;
+  width: 90vw;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+
+.activity{
+  width: 100vw;
+  padding-left: 5vw;
+  border-top: 2rpx solid #D8D8D8;
+  border-bottom: 2rpx solid #D8D8D8
+}

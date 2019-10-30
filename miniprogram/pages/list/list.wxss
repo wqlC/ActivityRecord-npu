@@ -1,0 +1,13 @@
+/* miniprogram/pages/list/list.wxss */
+/* .container{
+
+} */
+.idcard-item{
+  width: 100vw;
+  margin-bottom: 2rpx;
+  border-top: 1rpx solid #D8D8D8
+}
+
+.idcard-detail{
+  margin-left: 5vw;
+}

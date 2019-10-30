@@ -10,7 +10,8 @@ exports.main = async (event, context) => {
     userInfo
   } = event;
   timeStamp_today = new Date().setHours(0, 0, 0, 0);
-  timeStamp_today = parseInt(timeStamp_today);
+  //TODO
+  timeStamp_today = parseInt(timeStamp_today)-60*60*4*1000; //每天凌晨4点清零
   console.log("today is: ", timeStamp_today);
   let result = null;
   try {
